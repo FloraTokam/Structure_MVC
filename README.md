@@ -21,3 +21,6 @@ La vue permet d'afficher les pages demandées, en utilisant les données transmi
 
 
 Le Modèle permet de récupérer les données demandées par le contrôleur
+
+
+Création du .htaccess et d’URL rewriting : les URL seront transformées de index.php?page=accueil en index.php/accueil
