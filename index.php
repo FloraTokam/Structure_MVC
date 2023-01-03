@@ -1,4 +1,17 @@
 <?php
+
+//Dans un premier temps, si notre URL n’a pas de nom de page, lui indiquons d’afficher « page d’accueil »
+//sinon il affichera « autres pages » 
+
+if (empty($_GET['page'])){
+    $page = "accueil";
+}//Nous allons ensuite sécuriser notre URL avec le filter_var et FILTER_SANITIZE_URL afin de filtrer les URL entrées et
+//d’éviter les caractères spéciau
+else{
+    $url = explode("/", filter_var($_GET['page'], FILTER_SANITIZE_URL));
+    $page = $url[0];
+}
+
 $page_description = "Description de la page d'acceuil";
 $page_title = "Titre de la page d'accueil";
 $page_content = "<h1>Hello, world!</h1>";
