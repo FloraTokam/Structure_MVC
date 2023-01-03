@@ -1,4 +1,14 @@
 <?php
+$page_description = "Description de la page d'acceuil";
+$page_title = "Titre de la page d'accueil";
+$page_content = "<h1>Hello, world!</h1>";
+require_once("Views/common/template.php");
+
+
+?>
+
+
+<?php
 session_start();
 
 define("URL", str_replace("index.php","",(isset($_SERVER['HTTPS'])?"https":"http")."://".$_SERVER['HTTP_HOST'].$_SERVER["PHP_SELF"]));
