@@ -1,5 +1,5 @@
 <?php
-
+require_once("./Controller/MainController.controller.php");//on genere une instance du main controller
 //Dans un premier temps, si notre URL n’a pas de nom de page, lui indiquons d’afficher « page d’accueil »
 //sinon il affichera « autres pages » 
 
@@ -8,7 +8,7 @@ if (empty($_GET['page'])){
 }//Nous allons ensuite sécuriser notre URL avec le filter_var et FILTER_SANITIZE_URL afin de filtrer les URL entrées et
 //d’éviter les caractères spéciau
 else{
-    $url = explode("/", filter_var($_GET['page'], FILTER_SANITIZE_URL));
+    $url = explode("/", filter_var($_GET['page'], FILTER_SANITIZE_URL)); //on decoupe l'url avec le slash ensuite on securise avvec filter_var et filter_sanitize pour eviter les caracteres speciaux
     $page = $url[0];
 }
 

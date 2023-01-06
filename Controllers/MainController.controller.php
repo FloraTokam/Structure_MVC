@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 
 abstract class MainController{
 
