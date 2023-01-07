@@ -24,3 +24,5 @@ Le Modèle permet de récupérer les données demandées par le contrôleur
 
 
 Création du .htaccess et d’URL rewriting : les URL seront transformées de index.php?page=accueil en index.php/accueil
+
+La gestion des pages du site est effectuée par l'envoi de la querryString« ?page=x»
